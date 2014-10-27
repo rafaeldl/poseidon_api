@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140930211531) do
+ActiveRecord::Schema.define(version: 20141015194024) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -44,20 +44,26 @@ ActiveRecord::Schema.define(version: 20140930211531) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "size"
-    t.integer  "precision"
     t.boolean  "show_query"
     t.boolean  "show_index"
     t.string   "show_in"
-    t.boolean  "virtual"
     t.integer  "order"
     t.string   "options"
     t.string   "default"
     t.integer  "foreign_entity"
     t.string   "foreign_filter"
+    t.string   "visibility",     limit: 1
+    t.boolean  "editable"
+    t.integer  "scale"
+    t.boolean  "required"
   end
 
   add_index "fields", ["company_id"], name: "index_fields_on_company_id"
   add_index "fields", ["entity_id"], name: "index_fields_on_entity_id"
   add_index "fields", ["foreign_entity"], name: "index_fields_on_foreign_entity"
+
+  create_table "teste_produto", force: true do |t|
+    t.string "codigo"
+  end
 
 end

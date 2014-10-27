@@ -5,8 +5,10 @@ class AddColumnsToFields < ActiveRecord::Migration
     add_column :fields, :show_query, :boolean
     add_column :fields, :show_index, :boolean
     add_column :fields, :show_in, :string
-    add_column :fields, :virtual, :boolean
+    add_column :fields, :scale, :string, limit: 1
+    add_column :fields, :editable, :boolean
     add_column :fields, :order, :integer
+    add_column :fields, :required, :boolean
     add_column :fields, :options, :string
     add_column :fields, :default, :string
     add_column :fields, :foreign_entity, :integer, :references => :entities

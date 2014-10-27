@@ -1,0 +1,763 @@
+
+---
+companies:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - SomaDL
+    - '2014-10-13 12:48:24.046284'
+    - '2014-10-13 12:48:24.046284'
+
+---
+entities:
+  columns:
+  - id
+  - company_id
+  - name
+  - title
+  - description
+  - created_at
+  - updated_at
+  - header_id
+  - multiplicity
+  records: 
+  - - 1
+    - 1
+    - company
+    - Empresa
+    - Empresa do Cliente
+    - ''
+    - '2014-10-03 19:53:27.565000'
+    - 
+    - 
+  - - 2
+    - 1
+    - entity
+    - Entidade
+    - Entidade
+    - 
+    - 
+    - 
+    - 
+  - - 3
+    - 1
+    - field
+    - Campo
+    - Campos da Entidade
+    - 
+    - '2014-10-03 18:45:33.507000'
+    - 2
+    - 
+
+---
+fields:
+  columns:
+  - id
+  - company_id
+  - entity_id
+  - name
+  - title
+  - description
+  - kind
+  - mask
+  - created_at
+  - updated_at
+  - size
+  - show_query
+  - show_index
+  - show_in
+  - order
+  - options
+  - default
+  - foreign_entity
+  - foreign_filter
+  - visibility
+  - editable
+  - scale
+  - required
+  records: 
+  - - 1
+    - 1
+    - 1
+    - name
+    - Nome
+    - Nome da empresa
+    - string
+    - ''
+    - ''
+    - '2014-10-15 19:50:07.056000'
+    - 
+    - true
+    - true
+    - ''
+    - 
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - true
+  - - 2
+    - 1
+    - 2
+    - company_id
+    - Empresa
+    - Id da Empresa
+    - number
+    - ''
+    - 
+    - '2014-10-27 13:45:24.732172'
+    - 
+    - true
+    - false
+    - ''
+    - 
+    - ''
+    - ''
+    - 1
+    - ''
+    - R
+    - true
+    - 
+    - true
+  - - 3
+    - 1
+    - 2
+    - name
+    - Nome
+    - Nome da Entidade
+    - string
+    - ''
+    - 
+    - '2014-10-16 17:46:47.950751'
+    - 
+    - true
+    - true
+    - ''
+    - 
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - true
+  - - 4
+    - 1
+    - 2
+    - title
+    - Título
+    - Título da entidade
+    - string
+    - ''
+    - 
+    - '2014-10-27 13:05:08.815732'
+    - 
+    - true
+    - true
+    - ''
+    - 
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - true
+  - - 5
+    - 1
+    - 2
+    - description
+    - Descrição
+    - Descrição
+    - string
+    - ''
+    - ''
+    - '2014-10-27 13:04:22.077619'
+    - 
+    - false
+    - false
+    - 
+    - 
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - true
+  - - 6
+    - 1
+    - 3
+    - company_id
+    - Empresa
+    - Id da Empresa
+    - number
+    - ''
+    - 
+    - '2014-10-27 11:52:01.049450'
+    - 
+    - false
+    - false
+    - ''
+    - 
+    - ''
+    - ''
+    - 1
+    - ''
+    - O
+    - true
+    - 
+    - false
+  - - 7
+    - 1
+    - 3
+    - entity_id
+    - Entidade
+    - Id da Entidade
+    - number
+    - ''
+    - 
+    - '2014-10-27 11:52:01.050546'
+    - 
+    - true
+    - false
+    - ''
+    - 
+    - ''
+    - ''
+    - 2
+    - ''
+    - O
+    - true
+    - 
+    - false
+  - - 8
+    - 1
+    - 3
+    - name
+    - Nome
+    - Nome do campo
+    - string
+    - ''
+    - 
+    - '2014-10-16 17:58:33.747123'
+    - 
+    - true
+    - true
+    - ''
+    - 1
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 9
+    - 1
+    - 3
+    - title
+    - Titulo
+    - Titulo do campo
+    - string
+    - ''
+    - 
+    - '2014-10-16 17:58:33.751021'
+    - 
+    - true
+    - true
+    - ''
+    - 2
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 10
+    - 1
+    - 3
+    - description
+    - Descrição
+    - Descrição
+    - string
+    - ''
+    - 
+    - '2014-10-16 17:58:33.754431'
+    - 
+    - true
+    - true
+    - ''
+    - 3
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 11
+    - 1
+    - 3
+    - kind
+    - Tipo
+    - Tipo do campo
+    - string
+    - ''
+    - 
+    - '2014-10-16 18:06:18.286886'
+    - 
+    - true
+    - true
+    - ''
+    - 4
+    - string=Texto;integer=Inteiro;decimal=Decimal;date=Data;time=Hora;datetime=Data
+      e Hora;boolean=Sim ou Não
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 12
+    - 1
+    - 3
+    - mask
+    - Mascara
+    - Mascara
+    - string
+    - ''
+    - 
+    - '2014-10-16 17:22:31.562332'
+    - 
+    - false
+    - false
+    - 
+    - 
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 13
+    - 1
+    - 2
+    - header_id
+    - Cabeçalho
+    - Entidade cabeçalho
+    - number
+    - ''
+    - '2014-09-30 21:18:07.966000'
+    - '2014-10-27 13:45:24.733255'
+    - 
+    - false
+    - false
+    - ''
+    - 
+    - ''
+    - ''
+    - 2
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 17
+    - 1
+    - 2
+    - multiplicity
+    - Multiplicidade
+    - Multiplicidade
+    - integer
+    - ''
+    - '2014-09-30 21:20:15.791146'
+    - '2014-10-27 13:45:24.733903'
+    - 
+    - false
+    - false
+    - 
+    - 
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 18
+    - 1
+    - 3
+    - show_query
+    - Mostrar na pesquisa?
+    - Campo que define se campo será exibido na pesquisa
+    - boolean
+    - ''
+    - '2014-09-30 21:21:45.427000'
+    - '2014-10-16 17:58:33.761577'
+    - 
+    - false
+    - false
+    - ''
+    - 9
+    - ''
+    - 'true'
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 19
+    - 1
+    - 3
+    - show_index
+    - Mostrar na tela inicial?
+    - Campo que define se será exibido na tela inicial
+    - boolean
+    - ''
+    - '2014-09-30 21:23:33.021000'
+    - '2014-10-16 17:58:33.765992'
+    - 
+    - false
+    - false
+    - ''
+    - 8
+    - ''
+    - 'true'
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 20
+    - 1
+    - 3
+    - size
+    - Tamanho
+    - Tamanho do campo
+    - number
+    - ''
+    - '2014-09-30 21:37:56.145000'
+    - '2014-10-16 18:04:30.630524'
+    - 
+    - true
+    - true
+    - ''
+    - 5
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 21
+    - 1
+    - 3
+    - scale
+    - Precisão
+    - Precisão do campo
+    - number
+    - ''
+    - '2014-09-30 21:40:13.567000'
+    - '2014-10-16 17:58:33.773683'
+    - 
+    - true
+    - true
+    - ''
+    - 6
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 22
+    - 1
+    - 3
+    - visibility
+    - Visibilidade
+    - Define se o campo será visível para o usuário  e se será salvo ou não
+    - string
+    - ''
+    - '2014-09-30 21:42:40.738000'
+    - '2014-10-16 17:58:33.776800'
+    - 1
+    - false
+    - true
+    - ''
+    - 10
+    - R=Real;V=Virtual;O=Oculto
+    - '''R'''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 23
+    - 1
+    - 3
+    - order
+    - Order
+    - Define a ordenação do campo
+    - number
+    - ''
+    - '2014-09-30 21:44:21.872000'
+    - '2014-09-30 21:44:21.872000'
+    - 
+    - false
+    - false
+    - ''
+    - 
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 24
+    - 1
+    - 3
+    - options
+    - Opções
+    - Opções disponíveis para o usuário
+    - string
+    - ''
+    - '2014-09-30 21:45:32.170000'
+    - '2014-09-30 21:45:32.170000'
+    - 
+    - false
+    - false
+    - ''
+    - 
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 25
+    - 1
+    - 3
+    - default
+    - Padrão
+    - Valor padrão
+    - string
+    - ''
+    - '2014-09-30 21:46:01.539648'
+    - '2014-10-16 17:22:31.569204'
+    - 
+    - false
+    - false
+    - 
+    - 
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 26
+    - 1
+    - 3
+    - foreign_entity
+    - Chave estrangeira
+    - Definir entidade no caso de o campo ser uma chave estrangeira
+    - string
+    - ''
+    - '2014-09-30 21:46:52.486000'
+    - '2014-10-17 12:48:06.013906'
+    - 
+    - false
+    - false
+    - ''
+    - 
+    - ''
+    - ''
+    - 2
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 27
+    - 1
+    - 3
+    - foreign_filter
+    - Filtro da entidade estrangeira
+    - Filtro da entidade estrangeira
+    - string
+    - ''
+    - '2014-09-30 21:48:13.891357'
+    - '2014-10-16 17:22:31.573929'
+    - 
+    - false
+    - false
+    - 
+    - 
+    - ''
+    - ''
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 37
+    - 1
+    - 15
+    - codigo
+    - Código
+    - Código de referência
+    - string
+    - 
+    - '2014-10-13 21:42:09.073558'
+    - '2014-10-13 21:42:09.073558'
+    - 
+    - false
+    - false
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - R
+    - true
+    - 
+    - false
+  - - 38
+    - 1
+    - 15
+    - descricao
+    - Descrição
+    - Descrição do produto
+    - string
+    - 
+    - '2014-10-13 21:42:09.079694'
+    - '2014-10-13 21:42:09.079694'
+    - 
+    - false
+    - false
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - R
+    - true
+    - 
+    - false
+  - - 39
+    - 1
+    - 16
+    - codigo
+    - Código
+    - Código de referência
+    - string
+    - 
+    - '2014-10-13 21:49:17.177103'
+    - '2014-10-13 21:49:17.177103'
+    - 
+    - false
+    - false
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - R
+    - true
+    - 
+    - false
+  - - 40
+    - 1
+    - 3
+    - editable
+    - Editável?
+    - É um campo editável?
+    - boolean
+    - ''
+    - '2014-10-15 18:38:20.569000'
+    - '2014-10-15 18:40:22.658075'
+    - 
+    - false
+    - false
+    - ''
+    - 
+    - ''
+    - 'true'
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+  - - 70
+    - 1
+    - 3
+    - required
+    - Obrigatório
+    - Define se é um campo obrigatório?
+    - boolean
+    - ''
+    - '2014-10-16 16:55:12.731987'
+    - '2014-10-16 17:58:33.779918'
+    - 
+    - true
+    - true
+    - 
+    - 7
+    - ''
+    - 'false'
+    - 
+    - ''
+    - R
+    - true
+    - 
+    - false
+
+---
+bancos:
+  columns:
+  - id
+  - codigo
+  - agencia
+  - conta
+  records: 
+  - - 1
+    - '001'
+    - '14532'
+    - '0000123123'
