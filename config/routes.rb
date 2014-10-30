@@ -1,12 +1,21 @@
 Rails.application.routes.draw do
 
-  resources :companies
+  devise_for :users #, :skip => [:sessions, :passwords, :registrations]
 
+  namespace :api, :defaults => { :format => 'json' } do
 
-  namespace :api do
+    # Autenticação
+    match 'sessions' => 'sessions#create', :via => [:post, :options]
+    match 'sessions' => 'sessions#destroy', :via => :delete
+    match 'companies' => 'companies#create', :via => [:post, :options]
+
+    match 'users/query' => 'users#query', :via => :get
+    resources :users
+    resources :companies
+
     scope '/:current_company/:current_branch' do
       # Recursos genericos
-      scope '/resource', :defaults => { :format => 'json' } do
+      scope '/resource' do
         match ':resource/metadata' => 'resources#metadata', :via => :get
         match ':resource/query' => 'resources#query', :via => :get
         match ':resource' => 'resources#index', :via => :get

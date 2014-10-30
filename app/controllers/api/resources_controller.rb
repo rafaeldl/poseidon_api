@@ -51,7 +51,7 @@ module Api
     def query
       resource = params[:resource]
       # entity = Entity.includes(:field_items).where(:fields => {show_query: true}).find_by_name(resource)
-      entity = Entity.includes(:many_field).where(:name => resource, :fields => {show_query: true}).first
+      entity = Entity.includes(:many_field).where(:name => resource, :fields => {show_index: true}).first
       filters = entity.many_field.where(kind: 'string').to_a.delete_if{|field| !@klazz.column_names.include? field.name}.map{|field| "\"#{field.name}\" LIKE :string_search" }
       @fields = [:id]+entity.many_field.map {|f| f.name.to_sym}
       @query = @klazz.select(@fields)
